@@ -19,7 +19,6 @@ export default function TopBar({ menuOpen, setMenuOpen }) {
     <a href='#Intro' className='logo'><img src='images/Arun.png' alt='images' className='logoImg'
     /></a>
     <div className='itemContainer'>
-   
     <span>+917019411969</span>
     </div>
 
