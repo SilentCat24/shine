@@ -10,13 +10,13 @@ export default function MenuBar({ menuOpen, setMenuOpen }) {
           <a href="#Intro">Home</a>
         </li>
         <li onClick={()=>setMenuOpen(false)}>
-          <a href="#Protfolio">Portfolio</a>
+          <a href="#Protfolio">About ME</a>
         </li>
         <li onClick={()=>setMenuOpen(false)}>
-          <a href="#works">Works</a>
+          <a href="#works">Projects</a>
         </li>
         <li onClick={()=>setMenuOpen(false)}>
-          <a href="#Test">Testimonials</a>
+          <a href="#Test">Links</a>
         </li>
         <li onClick={()=>setMenuOpen(false)}>
           <a href="#contact">Contact</a>

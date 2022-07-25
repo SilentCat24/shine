@@ -1,24 +1,9 @@
 import React,{useEffect,useRef} from 'react';
 import './Intro.scss';
-import { init } from 'ityped';
+
 
 
 export default function Intro() {
-const textRef =useRef();
-
-useEffect(()=>{
-init(textRef.current,{
-showCursor:true,
-cursorChar:"|",
-backDelay:2100,
-backSpeed:60,
-loop:false,
-strings:["designer"]
-
-})
-
-},[])
-
 
   return (
     <div className='Intro' id='Intro'>
@@ -32,8 +17,10 @@ strings:["designer"]
     <div className='wrapper'>
       <h2>Hi there I am </h2>
       <h1>Arun Kumar R</h1>
-      <h3>Professional <span ref={textRef}></span>
+      <h3 className='text' data-text="Front END DEVELOPER">Front
+
       </h3>
+  
 
     </div>
 <a href="#Protfolio">

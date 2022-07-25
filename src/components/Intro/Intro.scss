@@ -1,7 +1,23 @@
+@import "../global.scss";
+
 .Intro{
-    background-color: white;
+    color:white;
     display: flex;
-    background-color: #A9D3FF;
+    // background-color: #2A9134;
+ 
+
+    background-image: url("../../../public/images/nature.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left  ;
+    width: 100%;
+   
+    
+  @include mobile{
+    flex-direction: column;
+    align-items: center;
+   
+  }
 
 
 .left{
@@ -17,6 +33,9 @@
         align-items: flex-end;
         justify-content: center;
         float:right;
+        @include mobile{
+            display: none;
+          }
       
 
         .img{
@@ -55,6 +74,8 @@
 .right{
     flex:1;
     position: relative;
+    
+    
 
 
 
@@ -108,4 +129,45 @@ img{
     }
    
 }
+}
+
+// animation part
+.texts,
+.text{
+    
+    text-transform: uppercase;
+    font-size:60px;
+    -webkit-text-stroke: 1px #eee;
+    color: transparent;
+    letter-spacing: 5px;
+    position: relative;
+
+    @include mobile{
+        letter-spacing: 2px;
+        font-size: 40px;
+       
+      }
+  
+}
+
+.text::before{
+    content:attr(data-text);
+    position: absolute;
+    top:0;left:0;
+    color: #FFCF9C;
+    -webkit-text-stroke: 3px #ff7a00 ;
+    width:1px;
+    white-space:nowrap;
+    overflow:hidden;
+    border-right:3px linen #ff7a00;
+    animation:text-fill 2s ease-in-out alternate infinite;
+    @include mobile{
+        flex-wrap: wrap;
+       
+      }
+  
+}
+
+@keyframes text-fill {
+    100% { width:100%; }
 }

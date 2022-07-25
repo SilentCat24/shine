@@ -1,5 +1,6 @@
 .portfolioList {
     font-size: 14px;
+    font-weight: 900;
     margin-right: 50px;
     padding: 7px;
     border-radius: 10px;
@@ -10,7 +11,15 @@
     // }
   
     &.active {
-      background-color: red;
+      background-color: #c05c5c;
       color: white;
     }
+  }
+
+  marquee{
+    color: white;
+    background-color: #EED5C2;
+    color:rgb(110, 95, 95);
+    font-size: 16px;
+    font-weight: 700;
   }

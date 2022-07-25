@@ -3,70 +3,61 @@ import './Protfolio.scss';
 import ProtfolioList from '../protfolioList/protfolioList';
 
 import {
-  featuredPortfolio,
-  webPortfolio,
-  mobilePortfolio,
-  designPortfolio,
-  contentPortfolio,
+  EDUCATION,
+  SKILLS,
+ INTERNSHIP,
+ 
 } from "../../data/data";
-import { margin } from '@mui/system';
+
 
 
 export default function Protfolio() {
-  const [selected, setSelected] = useState("featured");
+  const [selected, setSelected] = useState("EDUCATION");
   const [data, setData] = useState([]);
 
 
   const list = [
     {
-      id: "featured",
-      title: "Featured",
+      id: "EDUCATION",
+      title: "Education",
     },
     {
-      id: "web",
-      title: "Web App",
+      id: "SKILLS",
+      title: "SKILLS",
     },
     {
-      id: "mobile",
-      title: "Mobile App",
+      id: "INTERNSHIP",
+      title: "INTERNSHIP",
     },
-    {
-      id: "design",
-      title: "Design",
-    },
-    {
-      id: "content",
-      title: "Content",
-    },
+    
   ];
 
   useEffect(() => {
     switch (selected) {
-      case "featured":
-        setData(featuredPortfolio);
+      case "EDUCATION":
+        setData(EDUCATION);
         break;
-      case "web":
-        setData(webPortfolio);
+      case "SKILLS":
+        setData(SKILLS);
         break;
-      case "mobile":
-        setData(mobilePortfolio);
+        case "INTERNSHIP":
+        setData(INTERNSHIP);
         break;
-      case "design":
-        setData(designPortfolio);
-        break;
-      case "content":
-        setData(contentPortfolio);
-        break;
+     
       default:
-        setData(featuredPortfolio);
+        setData(EDUCATION);
     }
   }, [selected]);
 
   return (
     <div className='protfolio' id='Protfolio'>
-        <h1>Prtfolio</h1>
+      
+        <h1>About Me</h1>
+        <marquee width ="50%">Hover on BOX to get Information</marquee>
+
       <ul>
         {list.map((item) => (
+            
           <ProtfolioList
             title={item.title}
             active={selected === item.id}
@@ -78,16 +69,20 @@ export default function Protfolio() {
       <div className="container">
         {data.map((d) => (
           <div className="item">
-                <h3>{d.title}</h3>
-                <br/>
+                <h3>{d.title}<br/>{d.title2}
+                <br/>{d.title3}
+                </h3>
+               
+   <img src={d.img}/>
+  
                 
-                <h2 >{d.SchoolName}</h2>
+                
           </div>
          
           
         ))
         
-       
+        
         }
       </div>
    </div>
