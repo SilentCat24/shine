@@ -20,7 +20,7 @@ export default function TopBar({ menuOpen, setMenuOpen }) {
     /></a>
     <div className='itemContainer'>
    
-    <span>+91 7019411969</span>
+    <span>+917019411969</span>
     </div>
 
     <div className='itemContainer'>

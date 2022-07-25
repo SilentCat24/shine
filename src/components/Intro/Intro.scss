@@ -91,14 +91,33 @@
         h1{
             font-size:60px;
             margin: 10px 0;
+         
+            @include mobile{
+                letter-spacing: 2px;
+                font-size: 40px;
+               
+              }
 
         }
         h2{
             font-size:35px;
+
+
+            @include mobile{
+                letter-spacing: 2px;
+                font-size: 30px;
+               
+              }
             
         }
         h3{
             font-size:30px;
+
+            @include mobile{
+                letter-spacing: 2px;
+                font-size: 20px;
+               
+              }
             
         }
 
@@ -144,7 +163,7 @@ img{
 
     @include mobile{
         letter-spacing: 2px;
-        font-size: 40px;
+        font-size: 20px;
        
       }
   
@@ -161,6 +180,7 @@ img{
     overflow:hidden;
     border-right:3px linen #ff7a00;
     animation:text-fill 2s ease-in-out alternate infinite;
+   
     @include mobile{
         flex-wrap: wrap;
        
@@ -169,5 +189,5 @@ img{
 }
 
 @keyframes text-fill {
-    100% { width:100%; }
+    100% { width:90%; }
 }
